@@ -1,43 +1,41 @@
-html, body {
-  height: 100%;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   background-color: rgb(247, 243, 228);
-}
 
-main {
-  position: relative;
-  box-sizing: border-box;
-  padding: 50px 50px 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-}
-
-@media screen and (min-width: 800px) {
-  main {
-    margin: 0 auto;
-    width: 800px;
+  main,
+  footer {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
   }
-}
 
-img {
-  width: 100%;
-}
+  main {
+    padding: 50px 50px 0;
 
-.presentation {
-  margin:30px 0;
-}
+    img {
+      width: 100%;
+    }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin: 0 -50px;
-}
+    .presentation {
+      margin: 30px 0;
+    }
+  }
 
-.footer img {
-  display: block;
-  margin: 0 auto;
-  width: 250px;
+  footer {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 250px;
+    }
+  }
 }
